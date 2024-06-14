@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-import { Select, SelectItem } from "@nextui-org/react";
+import { Select, SelectItem, Button } from "@nextui-org/react";
 const GeneratedSolutions = () => {
   const coninsdata = [
     {
@@ -335,7 +335,7 @@ const GeneratedSolutions = () => {
       {/* coninsdata Show using map */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-5 lg:gap-8">
         {currentItems.map((item) => (
-          <div
+          <Button
             key={item.id}
             className="h-[72px] cursor-pointer hover:scale-[1.1] duration-250 p-[16px] bg-[#3B3C3D] text-white flex items-center justify-between rounded-[24px]"
           >
@@ -359,7 +359,7 @@ const GeneratedSolutions = () => {
                 {item.cost}
               </p>
             </div>
-          </div>
+          </Button>
         ))}
       </div>
 
