@@ -5,7 +5,7 @@ import Upgrades from "../components/Upgrades";
 
 const page = () => {
   return (
-    <div>
+    <div class="dark">
       <Upgrades />
       <GeneratedSolutions />
       <Subscribe />

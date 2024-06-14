@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
-
+import { Select, SelectItem } from "@nextui-org/react";
 const GeneratedSolutions = () => {
   const coninsdata = [
     {
@@ -256,6 +256,13 @@ const GeneratedSolutions = () => {
     }
   };
 
+  const items = [
+    "Cheapest Items",
+    "Cheapest Items 1",
+    "Cheapest Items 2",
+    "Cheapest Items 3",
+  ];
+
   const renderPageNumbers = () => {
     const pageNumbers = [];
     let startPage = Math.max(1, currentPage - 2);
@@ -292,20 +299,36 @@ const GeneratedSolutions = () => {
           </p>
         </div>
         <div>
-          <select className=" bg-transparent border border-[#7F7F7F] outline-none px-[10px] rounded-[16px] w-[180px] h-[48px]">
-            <option className="text-[14px] font-normal leading-[16.94px] tracking-[-0.04em] bg-black">
+          <Select
+            variant="bordered"
+            placeholder="Most Cheapest"
+            className="bg-transparent border border-[#7F7F7F] outline-none  rounded-[16px] w-[180px] "
+          >
+            <SelectItem
+              className="text-[14px] font-normal leading-[16.94px] tracking-[-0.04em] bg-gray-700"
+              style={{ padding: "10px" }}
+            >
               Most Cheapest
-            </option>
-            <option className="text-[14px] font-normal leading-[16.94px] tracking-[-0.04em] bg-black">
+            </SelectItem>
+            <SelectItem
+              className="text-[14px] font-normal leading-[16.94px] tracking-[-0.04em] bg-gray-700"
+              style={{ padding: "10px" }}
+            >
               Most Cheapest 1
-            </option>
-            <option className="text-[14px] font-normal leading-[16.94px] tracking-[-0.04em] bg-black">
+            </SelectItem>
+            <SelectItem
+              className="text-[14px] font-normal leading-[16.94px] tracking-[-0.04em] bg-gray-700"
+              style={{ padding: "10px" }}
+            >
               Most Cheapest 2
-            </option>
-            <option className="text-[14px] font-normal leading-[16.94px] tracking-[-0.04em] bg-black">
+            </SelectItem>
+            <SelectItem
+              className="text-[14px] font-normal leading-[16.94px] tracking-[-0.04em] bg-gray-700"
+              style={{ padding: "10px" }}
+            >
               Most Cheapest 3
-            </option>
-          </select>
+            </SelectItem>
+          </Select>
         </div>
       </div>
 
@@ -314,7 +337,7 @@ const GeneratedSolutions = () => {
         {currentItems.map((item) => (
           <div
             key={item.id}
-            className="h-[72px]  p-[16px] bg-[#3B3C3D] text-white flex items-center justify-between rounded-[24px]"
+            className="h-[72px] cursor-pointer hover:scale-[1.1] duration-250 p-[16px] bg-[#3B3C3D] text-white flex items-center justify-between rounded-[24px]"
           >
             <div className="flex flex-col gap-0.5">
               <h3 className="text-[16px] leading-[19.36px] font-medium tracking-[-0.04em] text-[#F4F4F4]">
